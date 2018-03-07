@@ -638,7 +638,11 @@
         			$indexData = $indexData+1;
         		}
 
-    			$dataArray[$indexData][$urutan[$indexing]] = $saveData[$index6];
+        		if($_GET['restype'] == 1) {
+        			$dataArray[$indexData][$indexing] = $urutan[$indexing]." : ".$saveData[$index6];
+        		} else {
+    				$dataArray[$indexData][$urutan[$indexing]] = $saveData[$index6];
+    			}
 
     			$urutanIndex = $urutanIndex+1;
     			$index6 = $index6+1;
